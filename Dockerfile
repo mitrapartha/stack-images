@@ -61,12 +61,12 @@ COPY ./opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 COPY ./project /var/www/html
 ## uncomment additional build commands as needed
-# RUN chown -R 1000:1000 /var/www/html \
+RUN chown -R 1000:1000 /var/www/html \
 # && chmod -R 777 /var/www/html/docroot/sites/default/files \
 #  && cd /var/www/html \
 # && composer install \
 #    && drush cr \
-# &&  echo "done"
+ &&  echo "done"
 
 # Install xdebug
 #RUN pecl install xdebug-2.9.2
